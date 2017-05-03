@@ -37,7 +37,7 @@ function setHiddenFields() {
     else if(answerval < 1000) {
         answerval = '0' + answerval.toString();
     }
-    else if(answanswervaler < 10000) {
+    else if(answerval < 10000) {
         answerval = answerval.toString();
     }
     else{
