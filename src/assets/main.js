@@ -19,7 +19,7 @@ function guess() {
             showAnswer(false);
             showReplay();
         }
-        else{
+         else if(attempt.value < 10){
             setMessage("Incorrect, try again.");
         }
     }
