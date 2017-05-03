@@ -8,7 +8,7 @@ function guess() {
         setHiddenFields();
     }
     if(validateInput(input)){
-        attempt++;
+       
         if(getResults(input)){
             setMessage("You Win! :)");
             showAnswer(true);
@@ -51,8 +51,8 @@ function setMessage(message) {
 }
 
 function validateInput(input){
-    console.log(input);
     if(input.length == 4){
+        attempt++;
         return true;
     }
     setMessage("Guesses must be exactly 4 characters long.");
@@ -62,7 +62,6 @@ function validateInput(input){
 function getResults(input){
     results = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
     inputString = input.toString();
-    console.log(answer);
     for(let i = 0; i<4; i++){
         if(inputString[i] == answer[i]){
             results = results + '<span class="glyphicon glyphicon-ok"></span>';
